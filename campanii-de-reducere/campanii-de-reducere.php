@@ -20,6 +20,9 @@ if (is_admin()) {
         );
 
         $updateChecker->setBranch('main');
+
+        // IMPORTANT: folosim ZIP-ul atașat la Release (nu "Source code zip")
+        $updateChecker->getVcsApi()->enableReleaseAssets();
     }
 }
 
